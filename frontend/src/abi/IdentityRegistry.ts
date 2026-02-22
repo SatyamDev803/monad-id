@@ -1,0 +1,93 @@
+export const identityRegistryAbi = [
+  {
+    inputs: [
+      { name: "_pA", type: "uint256[2]" },
+      { name: "_pB", type: "uint256[2][2]" },
+      { name: "_pC", type: "uint256[2]" },
+      { name: "_pubSignals", type: "uint256[2]" },
+    ],
+    name: "verifyAndRegister",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "revokeIdentity",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [{ name: "_user", type: "address" }],
+    name: "isHuman",
+    outputs: [{ name: "", type: "bool" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [{ name: "_user", type: "address" }],
+    name: "isOver18",
+    outputs: [{ name: "", type: "bool" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [{ name: "_user", type: "address" }],
+    name: "isUnique",
+    outputs: [{ name: "", type: "bool" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [{ name: "_user", type: "address" }],
+    name: "getIdentity",
+    outputs: [
+      {
+        components: [
+          { name: "isHuman", type: "bool" },
+          { name: "isOver18", type: "bool" },
+          { name: "commitmentHash", type: "uint256" },
+          { name: "tokenId", type: "uint256" },
+          { name: "verifiedAt", type: "uint256" },
+        ],
+        name: "",
+        type: "tuple",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "AGE_THRESHOLD",
+    outputs: [{ name: "", type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      { indexed: true, name: "user", type: "address" },
+      { indexed: false, name: "commitmentHash", type: "uint256" },
+      { indexed: false, name: "tokenId", type: "uint256" },
+      { indexed: false, name: "timestamp", type: "uint256" },
+    ],
+    name: "IdentityVerified",
+    type: "event",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      { indexed: true, name: "user", type: "address" },
+      { indexed: false, name: "timestamp", type: "uint256" },
+    ],
+    name: "IdentityRevoked",
+    type: "event",
+  },
+  { inputs: [], name: "AlreadyVerified", type: "error" },
+  { inputs: [], name: "CommitmentAlreadyUsed", type: "error" },
+  { inputs: [], name: "InvalidProof", type: "error" },
+  { inputs: [], name: "InvalidAgeThreshold", type: "error" },
+  { inputs: [], name: "NotVerified", type: "error" },
+] as const;

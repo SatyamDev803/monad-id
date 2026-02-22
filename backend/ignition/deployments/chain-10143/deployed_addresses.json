@@ -1,0 +1,6 @@
+{
+  "MonadIDModule#MonadHumanToken": "0xD19B625eE6199Ce3824054832300cA26198f9A28",
+  "MonadIDModule#Groth16Verifier": "0x830D0f998d80BFefaE02293dF572b92FeDC3667b",
+  "MonadIDModule#IdentityRegistry": "0x2541a918E3274048b18e9841D6391b64CDdCC4b0",
+  "MonadIDModule#MonadIDSubscription": "0xEb935EA7Dd87d6C8097A5Fd73A73D43334C6FA69"
+}

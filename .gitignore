@@ -1,0 +1,24 @@
+node_modules
+.env
+.env.local
+.env*.local
+
+# Hardhat
+backend/cache
+backend/artifacts
+backend/typechain
+backend/typechain-types
+backend/coverage
+backend/coverage.json
+backend/ignition/deployments/chain-31337
+
+# Next.js
+frontend/.next
+frontend/out
+
+# Claude
+.claude/
+
+# misc
+.DS_Store
+*.log
