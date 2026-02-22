@@ -10,6 +10,10 @@ backend/typechain
 backend/typechain-types
 backend/coverage
 backend/coverage.json
+
+# Ignition deployment artifacts (keep deployed_addresses.json + journal)
+backend/ignition/deployments/*/artifacts/
+backend/ignition/deployments/*/build-info/
 backend/ignition/deployments/chain-31337
 
 # Next.js
@@ -19,6 +23,12 @@ frontend/out
 # Claude
 .claude/
 
+# Lock files (each sub-project manages its own)
+# pnpm-lock.yaml — keep these, they're important
+
 # misc
 .DS_Store
 *.log
+*.tsbuildinfo
+
+docs/
