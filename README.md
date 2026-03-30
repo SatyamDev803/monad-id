@@ -172,7 +172,7 @@ modifier onlyHuman() {
 
 ## Team
 
-Built at Monad Blitz Mumbai 2025.
+Built at Monad Blitz Mumbai 2026.
 
 ## License
 
